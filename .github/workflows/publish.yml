@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -38,6 +39,6 @@ jobs:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           poetry publish \
-          —username __token__ \
-          —password $POETRY_PYPI_TOKEN_PYPI
+          --username __token__ \
+          --password $POETRY_PYPI_TOKEN_PYPI
 
